@@ -1,0 +1,214 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	background: #eeeeee;
+}
+
+small {
+	color: gray;
+}
+
+.header {
+	position: relative;
+	width: 100%;
+	background: black;
+	padding-top: 20px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.header img {
+	width: 6%;
+	height: 6%;
+	border-radius: 50%;
+	position: relative;
+	margin: 0 auto;
+}
+
+.nav-bar {
+	text-align: center;
+	background: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+.nav-bar ul {
+	list-style: none;
+	position: relative;
+	display: table;
+	margin: 0 auto;
+}
+
+.nav-bar ul li {
+	float: left;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+	font-size: 1.2rem;
+	color: black;
+	cursor: pointer;
+}
+
+.nav-bar .m-menu-toggle {
+	width: 2rem;
+	height: 2rem;
+	display: none;
+}
+
+.nav-bar .m-menu {
+	display: none;
+	width: 80%;
+	text-align: center;
+	font-size: 1.2rem;
+	color: gray;
+	margin: 0 auto;
+}
+
+.nav-bar .m-menu tr td{
+	padding-top: 1rem;
+}
+
+.main {
+	width: 50%;
+	background: white;
+	float: left;
+	margin-left: 11%;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+.main img {
+	width: 20%;
+	height: auto;
+	margin-right: 2%;
+}
+
+.right-menu {
+	margin-left: 5%;
+	width: 25%;
+	float: left;
+}
+
+.menu {
+	background: white;
+	margin-bottom: 20px;
+	padding: 1rem;
+}
+
+.menu hr {
+	margin-top: 5px;
+}
+
+.search-form {
+	width: 100%;
+}
+
+.search-form input {
+	height: 2rem;
+	margin-top: 0.6rem;
+}
+
+.search-form .search-input {
+	width: 70%;
+}
+
+.search-form .search-btn {
+	width: 20%;
+	margin-left: 2%;
+	background: black;
+	color: white;
+	border: 2px solid black;;
+}
+
+.menu ul {
+	list-style: none;
+}
+
+.menu ul li {
+	margin-top: 5px;
+	font-size: 1rem;
+}
+
+.menu img {
+	width: 30%;
+	height: auto;
+	margin-top: 1rem;
+	margin-right: 2%;
+}
+
+.tags span {
+	padding: 0.6rem;
+	background: black;
+	color: white;
+	font-size: 0.8rem;
+	float: left;
+	margin-right: 1rem;
+	margin-top: 0.8rem;
+	border-radius: 10%;
+}
+
+footer {
+	margin-top: 20px;
+	background: black;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	color: white;
+	font-size: 1rem;
+}
+
+footer a {;
+	color: white;
+}
+
+.clear {
+	clear: both;
+}
+
+/*当设备宽度小于800px的时候切换成移动端的布局*/
+@media screen and (max-width: 800px) {
+
+	.header img {
+		width: 15%;
+		height: 15%;
+	}
+	
+	.main {
+		float: none;
+		width: 95%;
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
+
+	.right-menu {
+		padding: 0;
+		float: none;
+		width: 95%;
+		margin: 20px auto;
+	}
+
+	.main img{
+		width: 40%;
+	}
+
+	.menu img {
+		width: 40%;
+	}
+
+	.nav-bar .m-menu-toggle {
+		display: inline;
+	}
+
+	.nav-bar ul {
+		display: none;
+	}
+}

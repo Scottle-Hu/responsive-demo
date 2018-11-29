@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>响应式布局demo</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<script type="application/javascript" src="js/jquery.min.js"></script>
+<script type="application/javascript">
+	$(document).ready(function() {
+		//移动端导航栏
+		$('.m-menu-toggle').click(function() {
+			$('.nav-bar .m-menu').toggle();
+		});
+	});
+</script>
+<body>
+	<div class="header">
+		<img src="image/logo.jpg"/>
+		<div class="nav-bar">
+			<img class="m-menu-toggle" src="image/menu.png"/>
+			<table class="m-menu">
+				<tr>
+					<td>菜单1</td>
+					<td>菜单2</td>
+					<td>菜单3</td>
+				</tr>
+				<tr>
+					<td>菜单4</td>
+					<td>菜单5</td>
+					<td>菜单6</td>
+				</tr>
+			</table>
+			<ul>
+				<li>菜单1</li>
+				<li>菜单2</li>
+				<li>菜单3</li>
+				<li>菜单4</li>
+				<li>菜单5</li>
+				<li>菜单6</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="main">
+		<h1>关于响应式布局</h1>
+		<hr/>
+		<small>这是一个响应式布局的单页面demo</small><br/><br/>
+		<p>我们在上面了解了什么是响应式布局，那在我们的实际项目中应该怎么去设计呢？在以往我们设计网站的时候都会受到不同浏览器的兼容性的困扰，还要来个不同尺寸设备，我们该怎么淡定下来呢？有需求就会有解决方案，说到响应式布局，就不得不提起CSS3中的Media Query（媒介查询），这可是个好东西，易用、强大、快捷……Media Query是制作响应式布局的一个利器，使用这个工具，我们可以非常方便快捷的制造出各种丰富的实用性强的界面。接下来就一起来深入的了解Media Query。</p>
+		<p>1、CSS3中的Media Query（媒介查询）是什么？<br/>
+			通过不同的媒介类型和条件定义样式表规则。媒介查询让CSS可以更精确作用于不同的媒介类型和同一媒介的不同条件。媒介查询的大部分媒介特性都接受min和max用于表达”大于或等于”和”小于或等于”。如：width会有min-width和max-width媒介查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。通过这个标签属性，我们可以很方便的在不同的设备下实现丰富的界面，特别是移动设备，将会运用更加的广泛。<br/>
+			2、media query能够获取哪些值？<br/>
+			<ul style="padding-left: 3%;">
+				<li>设备的宽和高device-width，device-height显示屏幕/触觉设备。</li>
+				<li>渲染窗口的宽和高width，height显示屏幕/触觉设备。</li>
+				<li>设备的手持方向，横向还是竖向orientation（portrait|lanscape）和打印机等。</li>
+				<li>画面比例aspect-ratio点阵打印机等。</li>
+				<li>设备比例device-aspect-ratio-点阵打印机等。</li>
+				<li>对象颜色或颜色列表color，color-index显示屏幕。</li>
+				<li>设备的分辨率resolution。
+			</ul>
+			3、语法结构及用法<br/>
+			<code>@media 设备名 only （选取条件） not （选取条件） and（设备选取条件），设备二{sRules}</code>
+		</p><br/>
+		<img src="image/1.jpg"/>
+		<img src="image/2.jpg"/>
+		<img src="image/3.jpg"/>
+		<img src="image/4.jpg"/>
+		<p>
+		下面再从直观一点的来看，响应式布局和自适应的区别：<br/>首先两种的方式的解决问题是不一样的。自适应是为了解决如何才能在不同大小的设备上呈现相同的网页。手机的屏幕比较小，宽度通常在600像素以下，pc的像素一般在1000像素以上，部分配置高的笔记本在2000像素以上的也有，同样的页面要显示在不同的设备上面，还要呈现出满意的效果，不是一件容易的事情。因此就有人想出了一个办法，能不能"一次设计，普遍适用"，让同一张网页自动适应不同大小的屏幕，根据屏幕的宽度，自动调节网页的内容大小，但是无论怎么样子，他们的主体的内容和布局是没有变化的。
+		</p>
+	</div>
+
+	<div class="right-menu">
+		<div class="menu">
+			<h3>站内搜索</h3>
+			<hr/>
+			<form class="search-form">
+				<input type="text" class="search-input"/>
+				<input type="submit" value="搜一搜" class="search-btn"/>
+			</form>
+		</div>
+		<div class="menu">
+			<h3>侧栏一</h3>
+			<hr/>
+			<div class="tags">
+				<span>jquery</span>
+				<span>javascript</span>
+				<span>vue</span>
+				<span>bootstrap</span>
+				<span>@media</span>
+				<span>easyui</span>
+				<span>前端</span>
+				<span>node js</span>
+				<span> native react</span>
+				<span>java</span>
+				<span>python</span>
+				<span>php</span>
+				<span>spring</span>
+				<span>flink</span>
+				<span>c#</span>
+				<span>kafka</span>
+				<span>zookeeper</span>
+				<span>druid</span>
+				<span>数据结构</span>
+				<span>shiro</span>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="menu">
+			<h3>侧栏二</h3>
+			<hr/>
+			<ul>
+				<li>2018年8月</li>
+				<li>2018年9月</li>
+				<li>2018年10月</li>
+				<li>2018年11月</li>
+			</ul>
+		</div>
+		<div class="menu">
+			<h3>侧栏三</h3>
+			<hr/>
+			<img src="image/logo.jpg"/>
+			<img src="image/1.jpg"/>
+			<img src="image/2.jpg"/>
+			<img src="image/3.jpg"/>
+			<img src="image/4.jpg"/>
+			<img src="image/5.jpg"/>
+			<img src="image/1.jpg"/>
+		</div>
+	</div>
+	<div class="clear"></div>
+
+	<footer>
+		&copy;2018 <a href="http://www.huqj.top" target="_blank">huqj.top</a> 版权所有
+	</footer>
+
+</body>
+</html>
